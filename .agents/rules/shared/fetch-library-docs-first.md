@@ -16,8 +16,8 @@ know it. Training data lags; names and signatures change.
 
 **How to apply**
 1. Use Context7 (`resolve-library-id` + `query-docs`) or `WebFetch` against the
-   official docs. (This complements the global Context7 rule in
-   `~/.claude/rules/context7.md`.)
+   official docs. (If your harness also ships a local Context7 rule — e.g.
+   Claude Code's `~/.claude/rules/context7.md` — this complements it.)
 2. Verify imports, signatures, and recommended setup against what you're about to
    write.
 3. Where docs leave a question open, flag the uncertainty explicitly rather than

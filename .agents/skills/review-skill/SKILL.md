@@ -61,7 +61,7 @@ Read the SKILL.md file and evaluate these criteria that cannot be checked progra
 - Does it include specific trigger keywords or phrases a user would actually say?
 - Is it written in third person? (not "I" or "You")
 - Is it specific enough to trigger reliably without over-triggering?
-- Would Claude be able to distinguish this skill from other installed skills based on the description alone?
+- Would a coding agent be able to distinguish this skill from other installed skills based on the description alone?
 
 **Instruction quality:**
 - Are instructions specific and actionable? (not vague like "validate the data")
@@ -70,7 +70,7 @@ Read the SKILL.md file and evaluate these criteria that cannot be checked progra
 - Is every paragraph earning its token cost?
 - Are examples provided with clearly delineated inputs and outputs?
 - Is output format specified where consistency matters?
-- If the instructions reference ARGUMENTS, does the frontmatter include an `argument-hint` field?
+- If the instructions reference ARGUMENTS, is usage clear in the description/body (portable)? Claude Code may also use the non-portable `argument-hint` frontmatter field — optional, not required elsewhere.
 - Do the instructions directly reference multiple items in an argument list? Such references can be brittle, and arguments should be kept simple.
 
 **Progressive disclosure:**
