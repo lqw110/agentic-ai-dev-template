@@ -1,7 +1,5 @@
 [project]
-# Placeholder name/description — replaced by scripts/init_template.py at `make init`.
-# Kept as a PEP 508-valid identifier so `uv sync` succeeds pre-init; the unique
-# token below (and `A multi-agent diagnostic system that investigates failures across software, data, ML, and LLM systems by dynamically selecting tools, gathering evidence, generating hypotheses, and verifying root causes` literal) are the substitution targets.
+# Package metadata for the initialized Agentic Diagnostic Engine backend.
 name = "agentic-diagnostic-engine"
 version = "0.1.0"
 description = "A multi-agent diagnostic system that investigates failures across software, data, ML, and LLM systems by dynamically selecting tools, gathering evidence, generating hypotheses, and verifying root causes"
@@ -17,8 +15,7 @@ requires = ["uv_build>=0.11.26,<0.12.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-# Sample package lives at `src/example_app/`; init swaps both the project name
-# and this module-name to the user's chosen package at `make init`.
+# Build the sample backend package from `src/example_app/`.
 module-name = "example_app"
 
 [dependency-groups]
