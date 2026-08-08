@@ -163,7 +163,7 @@ The user declined the worktree, so **work proceeds on the current branch**. Befo
 
 **MUST run before the Step 2 read-back.** A single issue card is a keyhole view; you need the larger arc before you commit to *how* to build it. Read the parent epic for how this issue fits the whole project, then cross-check both the card and the epic against what the repo actually is today.
 
-**Read `.claude/skills/clean-up-kanban/SKILL.md` first (it's short):** it owns the epic-body template (product outcome + lifecycle stage + drainable order) this step reads against, the staleness rules step 3 applies, and the **duplicate hunt (§5)** — before building, confirm no OTHER open card already covers what this branch implies (if one does, surface it: amend/merge/supersede via `/plan-issues` rather than silently building a duplicate).
+**Read `.agents/skills/clean-up-kanban/SKILL.md` first (it's short):** it owns the epic-body template (product outcome + lifecycle stage + drainable order) this step reads against, the staleness rules step 3 applies, and the **duplicate hunt (§5)** — before building, confirm no OTHER open card already covers what this branch implies (if one does, surface it: amend/merge/supersede via `/plan-issues` rather than silently building a duplicate).
 
 1. **Find the parent epic.** Resolve the GitHub sub-issue link first, then fall back to a `Parent epic: #NN` line in the body. The sub-issue parent is exposed as **`parent_issue_url`** on the issue payload (NOT a nested `.parent.number`), so take the trailing number:
    ```bash

@@ -363,10 +363,14 @@ After all concerns are resolved and pushed, Cursor Bugbot must re-review the lat
 
 ## Step 6: Wait for every check to settle
 
-A PR isn't done while CI or bot reviews are still pending. Use the bundled helper:
+A PR isn't done while CI or bot reviews are still pending. Use the bundled helper
+(skill-root-relative; run from `.agents/skills/resolve-pr-concerns/`, or invoke the
+same path from the repo root):
 
 ```bash
-bash <skill-dir>/scripts/wait_for_pr_checks.sh <pr-number> <owner>/<repo>
+bash scripts/wait_for_pr_checks.sh <pr-number> <owner>/<repo>
+# from repo root:
+# bash .agents/skills/resolve-pr-concerns/scripts/wait_for_pr_checks.sh <pr-number> <owner>/<repo>
 ```
 
 It polls `gh pr checks` until every required check has reached a terminal state (pass / fail / cancel / skipping). External bot reviews (Cursor Bugbot, Copilot, etc.) are treated as "soft pending" — the helper waits up to ten minutes for them, then surfaces them as `no-review` rather than blocking forever. Exit codes:
